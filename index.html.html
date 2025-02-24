@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+ React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { motion } from "framer-motion";
+
+export default function CyberPortfolio() {
+  return (
+    <div className="bg-gray-900 text-white min-h-screen p-6">
+      {/* Header */}
+      <motion.h1 className="text-4xl font-bold text-center mb-6" animate={{ scale: 1.1 }}>Cybersecurity Portfolio</motion.h1>
+      
+      {/* About Section */}
+      <Card className="mb-6 bg-gray-800 shadow-lg">
+        <CardContent className="p-6">
+          <h2 className="text-2xl font-semibold">About Me</h2>
+          <p className="text-gray-300 mt-2">I'm a cybersecurity enthusiast specializing in penetration testing, ethical hacking, and network security.</p>
+        </CardContent>
+      </Card>
+      
+      {/* Skills Section */}
+      <Card className="mb-6 bg-gray-800 shadow-lg">
+        <CardContent className="p-6">
+          <h2 className="text-2xl font-semibold">Skills & Tools</h2>
+          <p className="text-gray-300 mt-2">Networking, Linux, Web Security, SIEM, Penetration Testing, Bug Bounty, Python</p>
+        </CardContent>
+      </Card>
+      
+      {/* Projects Section */}
+      <Card className="mb-6 bg-gray-800 shadow-lg">
+        <CardContent className="p-6">
+          <h2 className="text-2xl font-semibold">Projects</h2>
+          <ul className="list-disc ml-5 text-gray-300">
+            <li>CTF Write-ups & Walkthroughs</li>
+            <li>Custom Security Scripts (Python, Bash)</li>
+            <li>Bug Bounty Reports</li>
+          </ul>
+        </CardContent>
+      </Card>
+      
+      {/* Contact Section */}
+      <Card className="mb-6 bg-gray-800 shadow-lg">
+        <CardContent className="p-6 text-center">
+          <h2 className="text-2xl font-semibold">Connect with Me</h2>
+          <div className="flex justify-center gap-4 mt-4">
+            <a href="#" className="text-blue-400 hover:text-blue-500 text-2xl"><FaGithub /></a>
+            <a href="#" className="text-blue-400 hover:text-blue-500 text-2xl"><FaLinkedin /></a>
+            <a href="#" className="text-blue-400 hover:text-blue-500 text-2xl"><FaTwitter /></a>
+          </div>
+        </CardContent>
+      </Card>
+      
+      {/* Footer */}
+      <p className="text-center text-gray-500 mt-6">© 2025 TNIU | Cybersecurity Enthusiast</p>
+    </div>
+  );
+}
